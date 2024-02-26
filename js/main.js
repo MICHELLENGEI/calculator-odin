@@ -11,11 +11,13 @@ function multiplication(a,b){
     let c = a * b;
     return c;
 }
-function division(a,b){
-    let c = a / b;
-    return c;
+function division(a, b) {
+    if (b === 0) {
+        return "Cannot divide by zero";
+    }
+    return a / b;
 }
 
-function oparate(params) {
+function operate(params) {
     
 }
