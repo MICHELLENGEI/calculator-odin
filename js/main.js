@@ -52,3 +52,21 @@ document.querySelector('.ac').addEventListener('click', function() {
     displayValue = "";
     updateDisplay();
 });
+
+document.querySelector('.equals').addEventListener('click', function() {
+    let expression = displayValue.match(/(-?\d+\.?\d*)([+\-*\/])/g);
+    if (expression) {
+        let result = parseFloat(expression[0]);
+        for (let i = 1; i < expression.length; i++) {
+            // Extract the operator and the next number
+            let operator = expression[i].slice(-1);
+            let nextNumber = parseFloat(expression[i].slice(0, -1));
+            result = operate(operator, result, nextNumber);
+        }
+
+        result = Math.round(result * 100) / 100;
+        
+        displayValue = result.toString();
+        updateDisplay();
+    }
+});
