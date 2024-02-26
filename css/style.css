@@ -43,6 +43,9 @@ button {
     border-radius: 4px;
     font-size: large;
 }
+.numbers{
+    background: #ffffff;
+}
 
 button:focus {
     background: #ffffff;
