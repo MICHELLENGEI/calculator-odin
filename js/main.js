@@ -1,13 +1,13 @@
 
-function addition(a,b) {
+function addition(a, b) {
     let c = a + b;
     return c;
 }
-function subtraction(a,b){
+function subtraction(a, b) {
     let c = a - b;
     return c;
 }
-function multiplication(a,b){
+function multiplication(a, b) {
     let c = a * b;
     return c;
 }
@@ -18,6 +18,18 @@ function division(a, b) {
     return a / b;
 }
 
-function operate(params) {
-    
+function operate(operator, a, b) {
+    switch (operator) {
+        case '+':
+            return addition(a, b);
+        case '-':
+            return subtraction(a, b);
+        case '*':
+            return multiplication(a, b);
+        case '/':
+            return division(a, b);
+        default:
+            return "Invalid operator";
+    }
+
 }
