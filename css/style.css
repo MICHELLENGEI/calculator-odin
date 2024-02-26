@@ -2,7 +2,6 @@ body {
     background: #141414;
 
 }
-
 h1 {
     text-align: center;
     font-size: 72px;
@@ -23,11 +22,16 @@ h1 {
     box-shadow: 2px 2px 2px #ffffff3f;
 }
 
-.results {
+#display {
+    display: flex;
+    align-items: center;
+    justify-content: left;
     width: 204px;
     height: 70px;
+    padding-left: 20px;
     border-radius: 4px;
     background: #ffffff;
+    font-size: large;
 }
 
 button {
