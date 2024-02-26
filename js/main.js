@@ -33,3 +33,22 @@ function operate(operator, a, b) {
     }
 
 }
+let displayValue = "";
+
+function addToDisplay(digit) {
+    displayValue += digit;
+    updateDisplay();
+
+}
+function updateDisplay() {
+    document.getElementById('display').textContent = displayValue;
+}
+document.querySelectorAll('.buttons button').forEach(button => {
+    button.addEventListener('click', function() {
+        addToDisplay(button.textContent);
+    });
+});
+document.querySelector('.ac').addEventListener('click', function() {
+    displayValue = "";
+    updateDisplay();
+});
